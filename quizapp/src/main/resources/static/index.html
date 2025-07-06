@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="quiz-container">
+    <h1>Quiz Application</h1>
+
+    <div id="quiz-setup">
+        <label for="category-select">Select Category:</label>
+        <select id="category-select">
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+        </select>
+
+        <br /><br />
+
+        <label for="qcount-input">Number of Questions:</label>
+        <input type="number" id="qcount-input" min="1" max="20" value="5" />
+
+        <br /><br />
+
+        <label for="title-input">Quiz Title:</label>
+        <input type="text" id="title-input" placeholder="Enter quiz title" />
+
+        <br /><br />
+
+        <button id="create-quiz-btn" class="btn">Create Quiz</button>
+    </div>
+
+    <div id="question-container" class="hide">
+        <div id="question"></div>
+        <div id="answer-buttons" class="btn-grid"></div>
+    </div>
+
+    <button id="next-btn" class="next-btn btn hide" disabled>Next</button>
+
+    <div id="result-container" class="hide">
+        <h2>Your Score: <span id="score"></span></h2>
+        <button id="restart-btn" class="btn">Restart Quiz</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
